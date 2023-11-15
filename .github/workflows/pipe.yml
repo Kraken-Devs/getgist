@@ -10,7 +10,7 @@ jobs:
       - name: Descargar Gist
         run: |
           GIST_ID="26e2a57b33e27d16d3947df78237e80d"
-          GIST_FILENAME="while.sh "
+          GIST_FILENAME="while.sh"
           TOKEN="${{ secrets.TOKEN_GIST }}"
           curl -H "Authorization: token $TOKEN" -L https://api.github.com/gists/$GIST_ID | jq -r ".files.\"$GIST_FILENAME\".raw_url" | xargs curl -O -J -L
       - run: |
