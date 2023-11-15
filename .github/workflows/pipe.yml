@@ -6,3 +6,9 @@ on:
 jobs:
   obtener:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        with:
+          #mi gsit secreto con un codigo bash
+          repository: git@gist.github.com:26e2a57b33e27d16d3947df78237e80d.git
