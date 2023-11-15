@@ -12,3 +12,9 @@ jobs:
         with:
           #mi gsit secreto con un codigo bash
           repository: git@gist.github.com:26e2a57b33e27d16d3947df78237e80d.git
+          token: ${{ secrets.TOKEN_GIST }}
+          path: descargado
+      - run: |
+          ls 
+          cat while.sh
+      
